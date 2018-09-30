@@ -1,0 +1,236 @@
+body {
+	position: relative;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+#test:hover {
+	cursor: pointer;
+}
+
+.alert-wrap {
+	position: relative;
+	width: 400px;
+	height: auto;
+	top: 100px;
+	background: #ffffff;
+	font-size: 15px;
+	color: #8c8c8c;
+	margin: 0 auto;
+	border: 1px solid #CECECE;
+	border-radius: 10px;
+	z-index: 9999;
+	opacity: 1;
+	/*transition: top 0.5s ease-in-out, 
+				opacity 0.5s ease-in-out;*/
+}
+@keyframes showSweetAlert {
+	0% {
+		transform: scale(.7);
+		-webkit-transform: scale(.7)
+	}
+	45% {
+		transform: scale(1.05);
+		-webkit-transform: scale(1.05)
+	}
+	80% {
+		transform: scale(.95);
+		-webkit-tranform: scale(.95)
+	}
+	100% {
+		transform: scale(1);
+		-webkit-transform: scale(1)
+	}
+}
+
+@-webkit-keyframes hideSweetAlert {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+		-webkit-transform: scale(1)
+	}
+	100% {
+		opacity: 0;
+		transform: scale(.5);
+		-webkit-transform: scale(.5)
+	}
+}
+
+@-moz-keyframes hideSweetAlert {
+	0% {
+		transform: scale(1);
+		-webkit-transform: scale(1)
+	}
+	100% {
+		transform: scale(.5);
+		-webkit-transform: scale(.5)
+	}
+}
+
+@keyframes hideSweetAlert {
+	0% {
+		transform: scale(1);
+		-webkit-transform: scale(1)
+	}
+	100% {
+		transform: scale(.5);
+		-webkit-transform: scale(.5)
+	}
+}
+
+.showSweetAlert {
+	-webkit-animation: showSweetAlert .3s;
+	-moz-animation: showSweetAlert .3s;
+	animation: showSweetAlert .3s
+}
+
+.hideSweetAlert {
+	-webkit-animation: hideSweetAlert .2s;
+	-moz-animation: hideSweetAlert .2s;
+	animation: hideSweetAlert .2s
+}
+
+
+@-webkit-keyframes pulseWarning {
+	0% {
+		border-color: #f8d486
+	}
+	100% {
+		border-color: #f8bb86
+	}
+}
+
+@-moz-keyframes pulseWarning {
+	0% {
+		border-color: #f8d486
+	}
+	100% {
+		border-color: #f8bb86
+	}
+}
+
+@keyframes pulseWarning {
+	0% {
+		border-color: #f8d486
+	}
+	100% {
+		border-color: #f8bb86
+	}
+}
+
+.pulseWarning {
+	-webkit-animation: pulseWarning .75s infinite alternate;
+	-moz-animation: pulseWarning .75s infinite alternate;
+	animation: pulseWarning .75s infinite alternate
+}
+
+@-webkit-keyframes pulseWarningIns {
+	0% {
+		background-color: #f8d486
+	}
+	100% {
+		background-color: #f8bb86
+	}
+}
+
+@-moz-keyframes pulseWarningIns {
+	0% {
+		background-color: #f8d486
+	}
+	100% {
+		background-color: #f8bb86
+	}
+}
+
+@keyframes pulseWarningIns {
+	0% {
+		background-color: #f8d486
+	}
+	100% {
+		background-color: #f8bb86
+	}
+}
+
+.pulseWarningIns {
+	-webkit-animation: pulseWarningIns .75s infinite alternate;
+	-moz-animation: pulseWarningIns .75s infinite alternate;
+	animation: pulseWarningIns .75s infinite alternate;
+}
+
+.alert-wrap button:hover {
+	cursor: pointer;
+}
+
+.alert-wrap.in {
+	top: 100px;
+	opacity: 1;
+	transition: top 0.5s ease-in, 
+				opacity 0.5s ease-in;
+}
+
+.alert-header {
+	width: 100%;
+	height: auto;
+	padding: 18px;
+}
+
+.alert-header .alert-title {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.alert-header button:hover {
+	color: #8C8C8C;
+	font-weight: bold;
+}
+
+.alert-content {
+	width: 100%;
+	height: auto;
+	line-height: 25px;
+	padding: 15px;
+	background: transparent;
+	text-align: center;
+}
+
+.alert-footer {
+	width: 100%;
+	height: 80px;
+	padding: 20px 15px;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.alert-footer button {
+	width: 100px;
+	height: 100%;
+	border-radius: 5px;
+	color: #FFFFFF;
+	background: #00A8FE;
+	border: 1px solid #00a8fe;
+}
+
+.alert-footer button:hover {
+	opacity: 0.7;
+	text-decoration: none;
+	outline: none;
+}
+
+
+.alert-footer button:active {
+	opacity: 0.5;
+	text-decoration: none;
+	outline: none;
+}
+
+.alert-footer button.err {
+	background: #f27474;
+	border: 1px solid #f27474;
+}
+
+.alert-footer button.suc {
+	background: #a5dc86;
+	border: 1px solid #a5dc86;
+}
