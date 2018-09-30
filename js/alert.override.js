@@ -52,12 +52,15 @@
 				window.footerDom.childNodes[0].classList.add(buttonColor);
 				document.body.append(window.frameDom);
 				setTimeout(function() {
-					frameDom.classList.add("showSweetAlert");
+					frameDom.classList.remove("hideAlert");
+					frameDom.classList.add("showAlert");
 				}, 100);	
 			}
 			
 			function closeAlert() {
 				console.log("closeAlert");
+				frameDom.classList.remove("showAlert");
+				frameDom.classList.add("hideAlert");
 				var alertDom = document.getElementById("alert-wrap");
 				console.log(alertDom);
 				alertDom.classList.remove("in");
